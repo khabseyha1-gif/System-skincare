@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Aura Skincare — elevated skincare made with clean ingredients and backed by science.">
+  <title>Aura Skincare</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="topbar">
+    <span>▣ &nbsp; Free shipping on orders over $75</span>
+    <span>♢ &nbsp; Complimentary samples with every order</span>
+    <button type="button" class="currency">USA (USD)⌄</button>
+  </div>
+
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="Aura Skincare home">AURA<small>SKINCARE</small></a>
+    <button class="menu-toggle icon-btn" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><b class="sr-only">Open menu</b></button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="#products">Shop</a><a href="#products">Best sellers</a><a href="#categories">Collections</a><a href="#ritual">About</a><a href="#journal">Journal</a><a href="#footer">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="search-open" type="button" aria-label="Search">⌕</button>
+      <button class="icon-btn account-btn" type="button" aria-label="Account">○</button>
+      <button class="icon-btn" id="favorites-button" type="button" aria-label="Favorites">♡<b id="favorite-count">0</b></button>
+      <button class="icon-btn" id="cart-open" type="button" aria-label="Open shopping bag">□<b id="cart-count">0</b></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Glow naturally</span>
+        <h1 id="hero-title">Pure Ingredients.<br>Visible Results.</h1>
+        <p>Thoughtfully formulated skincare that nourishes, protects and enhances your natural glow.</p>
+        <a class="button dark" href="#products">Shop now <span>→</span></a>
+        <div class="hero-benefits" aria-label="Product standards">
+          <span>♢ Clean ingredients</span><span>△ Clinically tested</span><span>○ Suitable for sensitive skin</span>
+        </div>
+      </div>
+      <div class="hero-image" role="img" aria-label="Aura cleanser, serum and moisturizer styled with leaves and white flowers"></div>
+    </section>
+
+    <section id="categories" class="category-bar" aria-label="Product categories">
+      <button type="button" data-category="cleanser"><span>▯</span>Cleanser</button>
+      <button type="button" data-category="serum"><span>♙</span>Serums</button>
+      <button type="button" data-category="moisturizer"><span>▱</span>Moisturizers</button>
+      <button type="button" data-category="suncare"><span>▽</span>Sun care</button>
+      <button type="button" data-category="mask"><span>◉</span>Masks</button>
+      <button type="button" data-category="gift"><span>♧</span>Sets & kits</button>
+      <button type="button" data-category="all"><span>◇</span>New arrivals</button>
+    </section>
+
+    <section id="products" class="section products-section">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Daily essentials</span><h2>Best sellers</h2></div>
+        <div class="product-tools"><label for="sort">Sort by</label><select id="sort"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name</option></select><button id="view-all" type="button">View all →</button></div>
+      </div>
+      <div id="active-filter" class="active-filter" hidden><span></span><button type="button">Clear filter ×</button></div>
+      <div id="product-grid" class="product-grid">
+        <article class="product-card reveal" data-id="cleanser" data-category="cleanser" data-name="Cream Cleanser" data-price="32" data-image="assets/cream-cleanser.jpg" data-description="Gentle daily cleanser for all skin types.">
+          <button class="favorite" type="button" aria-label="Save Cream Cleanser">♡</button><button class="quick-view" type="button">Quick view</button><img src="assets/cream-cleanser.jpg" alt="Aura Cream Cleanser"><div class="product-copy"><h3>Cream Cleanser</h3><p>Gentle daily cleanser<br>for all skin types</p><strong>$32.00</strong><button class="quick-add" type="button" aria-label="Add Cream Cleanser to bag">+</button></div>
+        </article>
+        <article class="product-card reveal" data-id="serum" data-category="serum" data-name="Radiance Serum" data-price="48" data-image="assets/radiance-serum.jpg" data-description="Brightening and hydrating vitamin C serum.">
+          <button class="favorite" type="button" aria-label="Save Radiance Serum">♡</button><button class="quick-view" type="button">Quick view</button><img src="assets/radiance-serum.jpg" alt="Aura Radiance Serum"><div class="product-copy"><h3>Radiance Serum</h3><p>Brightening & hydrating<br>vitamin C serum</p><strong>$48.00</strong><button class="quick-add" type="button" aria-label="Add Radiance Serum to bag">+</button></div>
+        </article>
+        <article class="product-card reveal" data-id="moisturizer" data-category="moisturizer" data-name="Daily Moisturizer" data-price="36" data-image="assets/daily-moisturizer.jpg" data-description="Nourishing moisturizer for a healthy skin barrier.">
+          <button class="favorite" type="button" aria-label="Save Daily Moisturizer">♡</button><button class="quick-view" type="button">Quick view</button><img src="assets/daily-moisturizer.jpg" alt="Aura Daily Moisturizer"><div class="product-copy"><h3>Daily Moisturizer</h3><p>Nourishing moisturizer<br>for healthy skin barrier</p><strong>$36.00</strong><button class="quick-add" type="button" aria-label="Add Daily Moisturizer to bag">+</button></div>
+        </article>
+        <article class="product-card reveal" data-id="sunscreen" data-category="suncare" data-name="Mineral Sunscreen" data-price="28" data-image="assets/mineral-sunscreen.jpg" data-description="Broad spectrum SPF 50 for daily protection.">
+          <button class="favorite" type="button" aria-label="Save Mineral Sunscreen">♡</button><button class="quick-view" type="button">Quick view</button><img src="assets/mineral-sunscreen.jpg" alt="Aura Mineral Sunscreen"><div class="product-copy"><h3>Mineral Sunscreen</h3><p>Broad spectrum SPF 50<br>for daily protection</p><strong>$28.00</strong><button class="quick-add" type="button" aria-label="Add Mineral Sunscreen to bag">+</button></div>
+        </article>
+        <article class="product-card reveal" data-id="toner" data-category="serum" data-name="Niacinamide Toner" data-price="26" data-image="assets/niacinamide-toner.jpg" data-description="Pore refining and balancing daily toner.">
+          <button class="favorite" type="button" aria-label="Save Niacinamide Toner">♡</button><button class="quick-view" type="button">Quick view</button><img src="assets/niacinamide-toner.jpg" alt="Aura Niacinamide Toner"><div class="product-copy"><h3>Niacinamide Toner</h3><p>Pore refining & balancing<br>daily toner</p><strong>$26.00</strong><button class="quick-add" type="button" aria-label="Add Niacinamide Toner to bag">+</button></div>
+        </article>
+      </div>
+      <div id="empty-products" class="empty-state" hidden><span>○</span><h3>No products found</h3><p>Try a different category or search term.</p><button class="button outline" type="button">Reset filters</button></div>
+    </section>
+
+    <section id="ritual" class="section feature-grid">
+      <article class="ritual-card reveal"><img src="assets/ritual.jpg" alt="Aura skincare ritual collection"><div><span class="eyebrow">The ritual</span><h2>Skincare that<br>becomes a ritual.</h2><p>Simple steps. Powerful results.<br>Made to fit effortlessly into your everyday.</p><a href="#products">Explore collection →</a></div></article>
+      <article class="promise-card reveal"><img src="assets/promise.jpg" alt="Person applying Aura skincare"><div><span class="eyebrow">Our promise</span><ul><li><b>Clean & safe</b><small>No harmful chemicals</small></li><li><b>Sustainable</b><small>Eco-friendly packaging</small></li><li><b>Cruelty free</b><small>Never tested on animals</small></li></ul></div></article>
+    </section>
+
+    <section id="journal" class="section journal">
+      <div class="section-head reveal"><div><span class="eyebrow">The journal</span><h2>Skin notes</h2></div><a href="#journal">Read all →</a></div>
+      <div class="journal-grid"><article class="reveal"><span>01</span><h3>How to layer your skincare</h3><p>A simple guide to making every formula work harder.</p><a href="#">Read article →</a></article><article class="reveal"><span>02</span><h3>Inside our clean standard</h3><p>What we leave out, what we choose, and why it matters.</p><a href="#">Read article →</a></article><article class="reveal"><span>03</span><h3>Your barrier-first routine</h3><p>Build a calmer, stronger complexion in three steps.</p><a href="#">Read article →</a></article></div>
+    </section>
+
+    <section class="press-newsletter">
+      <div class="press"><span>As seen in</span><b>VOGUE</b><b>BAZAAR</b><b>allure</b><b>ELLE</b></div>
+      <div class="newsletter"><div><span class="eyebrow">Let's glow together</span><p>Subscribe to get 15% off your first order.</p></div><form id="newsletter-form"><label class="sr-only" for="email">Email</label><input id="email" name="email" type="email" placeholder="Enter your email" required><button type="submit">Subscribe</button></form><p id="newsletter-status" role="status"></p></div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer-about"><a class="logo" href="#">AURA<small>SKINCARE</small></a><p>Elevated skincare made with clean ingredients and backed by science.</p><div class="social"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Pinterest">p</a><a href="#" aria-label="TikTok">♪</a><a href="#" aria-label="YouTube">▶</a></div></div>
+    <div><h2>Shop</h2><a href="#products">All products</a><a href="#products">Bestsellers</a><a href="#products">New arrivals</a><a href="#categories">Sets & kits</a><a href="#">Gift cards</a></div>
+    <div><h2>Collections</h2><a href="#categories">Hydration</a><a href="#categories">Brightening</a><a href="#categories">Anti-aging</a><a href="#categories">Sensitive skin</a><a href="#categories">Clear skin</a></div>
+    <div><h2>About</h2><a href="#ritual">Our story</a><a href="#ritual">Ingredients</a><a href="#ritual">Sustainability</a><a href="#journal">Press</a><a href="#">Careers</a></div>
+    <div><h2>Help</h2><a href="#">FAQ</a><a href="#">Shipping & returns</a><a href="#">Track order</a><a href="#footer">Contact us</a><a href="#">Privacy policy</a></div>
+    <div class="footer-service"><p><b>▣ Free shipping</b><small>On orders over $75</small></p><p><b>↻ 30-day returns</b><small>Hassle-free returns</small></p><p><b>□ Secure payment</b><small>100% secure checkout</small></p></div>
+    <div class="copyright">© 2026 Aura Skincare. All rights reserved.<span>Terms of Service &nbsp; · &nbsp; Privacy Policy</span></div>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow">Your ritual</span><h2 id="cart-title">Shopping bag</h2></div><button id="cart-close" class="icon-btn" type="button" aria-label="Close shopping bag">×</button></div>
+    <div class="shipping-progress"><p id="shipping-message">You're $75 away from free shipping.</p><div><span id="shipping-bar"></span></div></div>
+    <div id="cart-items" class="cart-items"></div>
+    <div id="cart-empty" class="drawer-empty"><span>□</span><h3>Your bag is empty</h3><p>Discover clean formulas made for your daily ritual.</p><button id="continue-shopping" class="button dark" type="button">Continue shopping</button></div>
+    <div id="cart-footer" class="cart-footer" hidden><div><span>Subtotal</span><strong id="cart-total">$0.00</strong></div><small>Taxes and shipping calculated at checkout.</small><button class="button dark checkout" type="button">Checkout</button></div>
+  </aside>
+
+  <dialog id="search-dialog" class="search-dialog">
+    <div class="search-head"><label for="search-input">Search Aura</label><button id="search-close" class="icon-btn" type="button" aria-label="Close search">×</button></div>
+    <form id="search-form"><span>⌕</span><input id="search-input" type="search" placeholder="Search cleanser, serum, SPF…" autocomplete="off"><button type="submit">Search</button></form>
+    <div class="search-suggestions"><span>Popular searches</span><button type="button">Serum</button><button type="button">Sunscreen</button><button type="button">Moisturizer</button></div>
+    <div id="search-results" class="search-results" aria-live="polite"></div>
+  </dialog>
+
+  <dialog id="quick-dialog" class="quick-dialog">
+    <button id="quick-close" class="icon-btn dialog-close" type="button" aria-label="Close product details">×</button>
+    <img id="quick-image" src="" alt="">
+    <div><span class="eyebrow">Aura essential</span><h2 id="quick-name"></h2><p id="quick-description"></p><strong id="quick-price"></strong><div class="quantity"><button id="quick-minus" type="button" aria-label="Decrease quantity">−</button><span id="quick-quantity">1</span><button id="quick-plus" type="button" aria-label="Increase quantity">+</button></div><button id="quick-add" class="button dark" type="button">Add to bag</button></div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
